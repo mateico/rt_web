@@ -1,7 +1,7 @@
 'use client';
 
 import RFLogo from '@/app/ui/rf-logo';
-import NavLinks from '@/app/ui/dashboard/nav-links'; // this is the one you already have
+import NavLinks from '@/app/ui/nav-links'; // this is the one you already have
 
 export default function TopNavBar() {
     return (
