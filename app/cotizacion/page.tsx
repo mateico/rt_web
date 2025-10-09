@@ -1,23 +1,17 @@
 import Form from '@/app/ui/invoices/create-form';
 import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchCustomers } from '@/app/lib/data';
+import SolicitarCotizacionForm from '@/app/ui/cotizacion/cotizacion-form';
+
 
 export default async function Page() {
     const customers = await fetchCustomers();
 
     return (
-        <main>
-            <Breadcrumbs
-                breadcrumbs={[
-                    { label: 'Invoices', href: '/dashboard/invoices' },
-                    {
-                        label: 'Create Invoice',
-                        href: '/dashboard/invoices/create',
-                        active: true,
-                    },
-                ]}
-            />
-            <Form customers={customers} />
-        </main>
+
+    <main className="max-w-3xl mx-auto py-10 px-4">
+        <h1 className="mb-6">Solicitar una cotización</h1>
+        <SolicitarCotizacionForm />
+    </main>
     );
 }
