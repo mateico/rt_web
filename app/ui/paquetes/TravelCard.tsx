@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 type TravelCardProps = {
     title: string;
     subtitle: string;
@@ -19,14 +21,14 @@ export default function TravelCard({
         <div className="rounded-lg overflow-hidden shadow-md bg-white">
             {/* Image section */}
             <div className="h-48 relative">
-                <img
+                <Image
                     src={image}
                     alt={title}
-                    className="h-full w-full object-cover"
+                    width={800}
+                    height={480}
+                    className="h-48 w-full object-cover rounded-t-lg"
                 />
-                <span className="absolute top-2 left-2 rounded-full bg-white bg-opacity-80 p-2">
-          <img src="/icon-suitcase.svg" alt="icon" className="h-6 w-6" />
-        </span>
+
             </div>
 
             {/* Text section */}
