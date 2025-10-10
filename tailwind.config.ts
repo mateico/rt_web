@@ -9,15 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        '13': 'repeat(13, minmax(0, 1fr))',
+          '13': 'repeat(13, minmax(0, 1fr))',
       },
-      colors: {
-        blue: {
-          400: '#2589FE',
-          500: '#0070F3',
-          600: '#2F6FEB',
+        colors: {
+            primary: {
+                DEFAULT: '#0c2732',
+                light: '#97cce4',
+                dark: '#07171e',
+            },
+            secondary: {
+                DEFAULT: '#dab170',
+                light: '#ffe8c6',
+                dark: '#775b2f',
+            },
         },
-      },
     },
     keyframes: {
       shimmer: {
