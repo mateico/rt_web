@@ -22,9 +22,9 @@ export default function Page() {
                         Ver Paquetes
                     </Link>
                 </div>
-                <div className="md:w-1/2 mt-10 md:mt-0">
+                <div className="md:w-1/2 mt-10 md:mt-0 md:ml-8">
                     <Image
-                        src="/hero-image.png"
+                        src="/hero-image.webp"
                         alt="Viaje soñado"
                         width={600}
                         height={400}
