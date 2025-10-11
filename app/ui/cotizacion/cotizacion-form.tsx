@@ -2,7 +2,7 @@
 
 export default function SolicitarCotizacionForm() {
     return (
-        <form className="rounded-lg bg-white shadow-md p-6 space-y-4">
+        <form className="rounded-lg bg-secondary-30 shadow-md p-6 space-y-4">
             <h2 className="text-xl font-semibold">Solicitar una cotización</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input

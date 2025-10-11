@@ -10,7 +10,6 @@ export default async function Page() {
     return (
 
     <main className="max-w-3xl mx-auto py-10 px-4">
-        <h1 className="mb-6">Solicitar una cotización</h1>
         <SolicitarCotizacionForm />
     </main>
     );

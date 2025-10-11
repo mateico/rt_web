@@ -1,6 +1,5 @@
 import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts'
-import SideNav from "@/app/ui/dashboard/sidenav";
 import TopNavBar from "@/app/ui/TopNavBar";
 import Foot from "@/app/ui/Foot"
 
@@ -11,7 +10,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-        <body className={`${inter.className} flex min-h-screen flex-col`}>
+        <body className={`${inter.className} flex min-h-screen flex-col bg-secondary-50`}>
         <TopNavBar/>
         <main className="flex-grow p-6">{children}</main>
         <Foot/>

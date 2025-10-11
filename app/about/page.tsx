@@ -3,7 +3,7 @@ import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline
 
 export default function Page() {
     return (
-        <main className="min-h-screen bg-white px-6 py-16 md:px-12 lg:px-24">
+        <main className="min-h-screen bg-secondary-50 px-6 py-16 md:px-12 lg:px-24">
             {/* Encabezado */}
             <section className="max-w-4xl mx-auto text-center">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-6">

@@ -28,6 +28,7 @@ const config: Config = {
                 },
                 primary: designTokens.colors.brand,
                 secondary: {
+                    30:  'hsl(37, 60%, 97%)',
                     50:  'hsl(37, 60%, 95%)',
                     100: 'hsl(37, 60%, 89%)',
                     200: 'hsl(37, 60%, 80%)',

@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 export default function Page() {
     return (
-        <main className="min-h-screen bg-primary-800  text-white">
+        <main className="min-h-screen bg-secondary-50  text-white">
             {/* Hero Section */}
-            <section className="relative flex flex-col md:flex-row items-center justify-between px-6 py-20 md:px-20 bg-gradient-to-r from-primary to-primary-dark">
+            <section className="relative rounded-lg bg-primary-700 flex flex-col md:flex-row items-center justify-between px-6 py-20 md:px-20 bg-gradient-to-r from-primary to-primary-dark">
                 <div className="md:w-1/2 text-center md:text-left">
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
                         Descubrí tu próximo destino
@@ -34,7 +34,7 @@ export default function Page() {
             </section>
 
             {/* Destinations Preview */}
-            <section className="px-6 py-16 md:px-20 bg-white text-gray-800">
+            <section className="px-6 py-16 md:px-20 bg-secondary-50 text-gray-800">
                 <h2 className="text-3xl font-bold text-primary mb-8 text-center">
                     Destinos Populares
                 </h2>
@@ -61,7 +61,7 @@ export default function Page() {
             </section>
 
             {/* Contact CTA */}
-            <section className="bg-secondary-500  py-16 px-6 md:px-20 text-primary text-center">
+            <section className="bg-secondary-500 rounded-lg py-16 px-6 md:px-20 text-primary text-center">
                 <h3 className="text-3xl font-bold">¿Tenés dudas o querés reservar?</h3>
                 <p className="mt-2 text-lg">Contactanos y organizamos tu viaje ideal ✈️</p>
                 <Link
