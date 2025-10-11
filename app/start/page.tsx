@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Page() {
     return (
-        <main className="min-h-screen bg-primary text-white">
+        <main className="min-h-screen bg-primary-800  text-white">
             {/* Hero Section */}
             <section className="relative flex flex-col md:flex-row items-center justify-between px-6 py-20 md:px-20 bg-gradient-to-r from-primary to-primary-dark">
                 <div className="md:w-1/2 text-center md:text-left">
@@ -17,7 +17,7 @@ export default function Page() {
                     </p>
                     <Link
                         href="/paquetes"
-                        className="mt-6 inline-block rounded-lg bg-secondary px-6 py-3 text-primary font-semibold shadow-md hover:bg-secondary-dark transition"
+                        className="mt-6 inline-block rounded-lg bg-secondary-500  px-6 py-3 text-primary font-semibold shadow-md hover:bg-secondary-500 -800  transition"
                     >
                         Ver Paquetes
                     </Link>
@@ -52,7 +52,7 @@ export default function Page() {
                                 height={300}
                                 className="w-full h-48 object-cover"
                             />
-                            <div className="p-4 bg-secondary text-primary text-center font-semibold text-lg">
+                            <div className="p-4 bg-secondary-500  text-primary text-center font-semibold text-lg">
                                 {dest.title}
                             </div>
                         </div>
@@ -61,12 +61,12 @@ export default function Page() {
             </section>
 
             {/* Contact CTA */}
-            <section className="bg-secondary py-16 px-6 md:px-20 text-primary text-center">
+            <section className="bg-secondary-500  py-16 px-6 md:px-20 text-primary text-center">
                 <h3 className="text-3xl font-bold">¿Tenés dudas o querés reservar?</h3>
                 <p className="mt-2 text-lg">Contactanos y organizamos tu viaje ideal ✈️</p>
                 <Link
                     href="/contacto"
-                    className="mt-6 inline-block rounded-md bg-primary text-white px-5 py-3 font-medium hover:bg-primary-dark transition"
+                    className="mt-6 inline-block rounded-md bg-primary-800  text-white px-5 py-3 font-medium hover:bg-primary-900  transition"
                 >
                     Contactar ahora
                 </Link>

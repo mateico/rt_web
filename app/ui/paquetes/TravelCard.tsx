@@ -35,7 +35,7 @@ export default function TravelCard({
             <div className="p-4 space-y-1">
                 <div className="flex justify-between text-xs text-gray-500">
                     <span>PAQUETE</span>
-                    <span className="bg-primary-light text-primary-dark rounded-full px-2 py-0.5">{country}</span>
+                    <span className="bg-primary-400   text-primary-dark rounded-full px-2 py-0.5">{country}</span>
                 </div>
                 <h3 className="text-lg font-semibold">{title}</h3>
                 <p className="text-sm text-gray-500">{subtitle}</p>
@@ -44,7 +44,7 @@ export default function TravelCard({
                         <p className="text-gray-500">desde</p>
                         <p className="font-bold text-lg">USD {price}</p>
                     </div>
-                    <span className="bg-secondary-light text-secondary-dark rounded-full px-2 py-0.5 text-xs">{tag}</span>
+                    <span className="bg-secondary-500 -400  text-secondary-dark rounded-full px-2 py-0.5 text-xs">{tag}</span>
                 </div>
             </div>
         </div>

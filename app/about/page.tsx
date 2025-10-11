@@ -38,7 +38,7 @@ export default function Page() {
             </section>
 
             {/* Bloque de contacto moderno */}
-            <section className="mt-24 max-w-6xl mx-auto rounded-3xl bg-primary text-white px-8 py-12 shadow-xl">
+            <section className="mt-24 max-w-6xl mx-auto rounded-3xl bg-primary-800  text-white px-8 py-12 shadow-xl">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Texto de contacto */}
                     <div>
@@ -67,7 +67,7 @@ export default function Page() {
                     <div className="text-center md:text-right">
                         <Link
                             href="/paquetes"
-                            className="inline-block rounded-lg bg-secondary text-primary font-semibold px-6 py-3 text-lg shadow hover:bg-secondary-dark transition"
+                            className="inline-block rounded-lg bg-secondary-500  text-primary font-semibold px-6 py-3 text-lg shadow hover:bg-secondary-500 -800  transition"
                         >
                             Ver Paquetes
                         </Link>

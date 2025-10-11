@@ -69,7 +69,7 @@ export default function SolicitarCotizacionForm() {
             <div className="text-center">
                 <button
                     type="submit"
-                    className="bg-primary text-white px-6 py-2 rounded-md hover:bg-primary-dark transition-colors"
+                    className="bg-primary-800  text-white px-6 py-2 rounded-md hover:bg-primary-900  transition-colors"
                 >
                     Enviar cotización
                 </button>
