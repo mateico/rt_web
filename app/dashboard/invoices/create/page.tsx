@@ -3,7 +3,7 @@ import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchCustomers } from '@/app/lib/data';
 
 export default async function Page() {
-    const customers = await fetchCustomers();
+    /*const customers = await fetchCustomers();
 
     return (
         <main>
@@ -19,5 +19,5 @@ export default async function Page() {
             />
             <Form customers={customers} />
         </main>
-    );
+    );*/
 }
