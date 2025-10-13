@@ -1,9 +1,18 @@
-import { GlobeAltIcon } from '@heroicons/react/24/outline';
-import { lusitana } from '@/app/ui/fonts';
+import clsx from 'clsx';
 
 export default function RFLogo({ className }: { className?: string }) {
-  return <img
-      src="/rufina_travel_title.svg"
-      alt="Rufina Travel"
-      className={className ?? 'h-10 w-auto'} />;
+  return <>
+
+      {/* Mobile logo */}
+      <img
+          src="/rt_logo.webp"
+          alt="Rufina Travel"
+          className={clsx('block md:hidden', className)} />
+
+      {/* Desktop logo */}
+      <img
+          src="/rufina_title_logo.webp"
+          alt="Rufina Travel"
+          className={clsx('hidden md:block', className)} />
+  </>;
 }

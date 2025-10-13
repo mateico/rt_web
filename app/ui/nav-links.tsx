@@ -29,14 +29,16 @@ export default function NavLinks() {
                         key={link.name}
                         href={link.href}
                         className={clsx(
-                            'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-secondary-30 p-3 text-sm font-medium hover:bg-sky-100 hover:text-primary-dark md:flex-none md:justify-start md:p-2 md:px-3',
+                            'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-secondary-30 p-3 text-sm font-medium md:flex-none md:justify-start md:p-2 md:px-3',
+                            'transform transition-transform duration-200 hover:scale-110', // ✅ new
                             {
                                 'bg-sky-900 text-neutral-200': pathname === link.href,
+                                'hover:bg-primary-100': pathname !== link.href,
                             },
                         )}
                     >
-                        <LinkIcon className="w-6"/>
-                        <p className="hidden md:block">{link.name}</p>
+                        <LinkIcon className="w-6 max-[935px]:hidden"/>
+                        <p>{link.name}</p>
                     </Link>
                 );
             })}
