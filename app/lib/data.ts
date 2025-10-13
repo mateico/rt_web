@@ -1,15 +1,15 @@
 import postgres from 'postgres';
 import {
-  CustomerField,
-  CustomersTableType,
-  InvoiceForm,
-  InvoicesTable,
-  LatestInvoiceRaw,
-  Revenue,
+    CustomerField,
+    CustomersTableType,
+    InvoiceForm,
+    InvoicesTable,
+    LatestInvoiceRaw, PaquetesTable,
+    Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
 
-//const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
+const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
 export async function fetchRevenue() {
   try {
@@ -85,39 +85,32 @@ export async function fetchCardData() {
   }
 }
 
-const ITEMS_PER_PAGE = 6;
-export async function fetchFilteredInvoices(
+export async function fetchFilteredPaquetes(
   query: string,
-  currentPage: number,
 ) {
-  const offset = (currentPage - 1) * ITEMS_PER_PAGE;
-
   try {
-      /*const invoices = await sql<InvoicesTable[]>`
+      const paquetes = await sql<PaquetesTable[]>`
         SELECT
-          invoices.id,
-          invoices.amount,
-          invoices.date,
-          invoices.status,
-          customers.name,
-          customers.email,
-          customers.image_url
-        FROM invoices
-        JOIN customers ON invoices.customer_id = customers.id
+            paquetes.id,
+            paquetes.title,
+            paquetes.subtitle,
+            paquetes.price,
+            paquetes.image,
+            paquetes.country,
+            paquetes.tag
+        FROM paquetes
         WHERE
-          customers.name ILIKE ${`%${query}%`} OR
-          customers.email ILIKE ${`%${query}%`} OR
-          invoices.amount::text ILIKE ${`%${query}%`} OR
-          invoices.date::text ILIKE ${`%${query}%`} OR
-          invoices.status ILIKE ${`%${query}%`}
-        ORDER BY invoices.date DESC
-        LIMIT ${ITEMS_PER_PAGE} OFFSET ${offset}
+            paquetes.title ILIKE ${`%${query}%`} OR
+            paquetes.subtitle ILIKE ${`%${query}%`} OR
+            paquetes.country::text ILIKE ${`%${query}%`} OR
+            paquetes.tag::text ILIKE ${`%${query}%`}
+        ORDER BY paquetes.id DESC
       `;
 
-      return invoices;*/
+      return paquetes;
   } catch (error) {
     console.error('Database Error:', error);
-    //throw new Error('Failed to fetch invoices.');
+    throw new Error('Failed to fetch invoices.');
   }
 }
 
@@ -169,7 +162,7 @@ export async function fetchInvoiceById(id: string) {
 
 export async function fetchCustomers() {
   try {
-   /* const customers = await sql<CustomerField[]>`
+   const customers = await sql<CustomerField[]>`
       SELECT
         id,
         name
@@ -177,10 +170,10 @@ export async function fetchCustomers() {
       ORDER BY name ASC
     `;
 
-    return customers;*/
+    return customers;
   } catch (err) {
     console.error('Database Error:', err);
-    //throw new Error('Failed to fetch all customers.');
+    throw new Error('Failed to fetch all customers.');
   }
 }
 

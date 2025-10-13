@@ -100,3 +100,13 @@ export type Cotizacion = {
     menores: number;
     observaciones: string;
 };
+
+export type PaquetesTable = {
+    id: string;
+    title: string;
+    subtitle: string;
+    price:number;
+    image: string;
+    country: string;
+    tag: string;
+}

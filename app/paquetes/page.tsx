@@ -19,7 +19,7 @@ export default async function Page(props: {
                 <Search placeholder="Buscar destino..."/>
             </div>
             {<Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton/>}>
-                <Table query={query} currentPage={currentPage}/>
+                <Table query={query}/>
             </Suspense>}
         </div>
     );
