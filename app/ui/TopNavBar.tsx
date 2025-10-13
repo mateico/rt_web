@@ -16,7 +16,7 @@ export default function TopNavBar() {
                     </div>
 
 
-                    <nav className="flex gap-4" role="navigation" aria-label="Main navigation">
+                    <nav className="flex gap-1 md:gap-4" role="navigation" aria-label="Main navigation">
                         <NavLinks />
                     </nav>
 
