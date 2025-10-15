@@ -1,6 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 type TravelCardProps = {
+    id: string;
     title: string;
     subtitle: string;
     price: number;
@@ -10,6 +12,7 @@ type TravelCardProps = {
 };
 
 export default function TravelCard({
+                                       id,
                                        title,
                                        subtitle,
                                        price,
@@ -18,7 +21,10 @@ export default function TravelCard({
                                        tag,
                                    }: TravelCardProps) {
     return (
-        <div className="rounded-lg overflow-hidden shadow-md bg-white">
+        <Link
+            href={`/paquetes/${id}`}
+            className="rounded-lg overflow-hidden shadow-md bg-white"
+        >
             {/* Image section */}
             <div className="h-48 relative">
                 <Image
@@ -44,9 +50,11 @@ export default function TravelCard({
                         <p className="text-gray-500">desde</p>
                         <p className="font-bold text-lg">USD {price}</p>
                     </div>
-                    <span className="bg-secondary-400 -400 text-secondary-dark rounded-full px-2 py-0.5 text-xs">{tag}</span>
+                    <span
+                        className="bg-secondary-400 -400 text-secondary-dark rounded-full px-2 py-0.5 text-xs">{tag}</span>
                 </div>
             </div>
-        </div>
+        </Link>
+
     );
 }

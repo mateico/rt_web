@@ -1,15 +1,58 @@
 import postgres from 'postgres';
-import {
-    CustomerField,
-    CustomersTableType,
-    InvoiceForm,
-    InvoicesTable,
-    LatestInvoiceRaw, PaquetesTable,
-    Revenue,
-} from './definitions';
-import { formatCurrency } from './utils';
+import {CustomerField, PaquetesTable,} from './definitions';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
+
+export async function fetchFilteredPaquetes(
+    query: string,
+) {
+    try {
+        const data = await sql<PaquetesTable[]>`
+        SELECT
+            paquetes.id,
+            paquetes.title,
+            paquetes.subtitle,
+            paquetes.price,
+            paquetes.image,
+            paquetes.country,
+            paquetes.tag
+        FROM paquetes
+        WHERE
+            paquetes.title ILIKE ${`%${query}%`} OR
+            paquetes.subtitle ILIKE ${`%${query}%`} OR
+            paquetes.country::text ILIKE ${`%${query}%`} OR
+            paquetes.tag::text ILIKE ${`%${query}%`}
+        ORDER BY paquetes.id DESC
+      `;
+
+        return data;
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch invoices.');
+    }
+}
+
+export async function fetchPaqueteById(id: string) {
+    try {
+        const result = await sql<PaquetesTable[]>`
+             SELECT
+                 paquetes.id,
+                 paquetes.title,
+                 paquetes.subtitle,
+                 paquetes.price,
+                 paquetes.image,
+                 paquetes.country,
+                 paquetes.tag
+             FROM paquetes
+           WHERE paquetes.id = ${id}
+             LIMIT 1;
+         `;
+        return result[0] ?? null;
+    } catch (error) {
+        console.error('Database Error:', error);
+        //throw new Error('Failed to fetch invoice.');
+    }
+}
 
 export async function fetchRevenue() {
   try {
@@ -85,34 +128,7 @@ export async function fetchCardData() {
   }
 }
 
-export async function fetchFilteredPaquetes(
-  query: string,
-) {
-  try {
-      const paquetes = await sql<PaquetesTable[]>`
-        SELECT
-            paquetes.id,
-            paquetes.title,
-            paquetes.subtitle,
-            paquetes.price,
-            paquetes.image,
-            paquetes.country,
-            paquetes.tag
-        FROM paquetes
-        WHERE
-            paquetes.title ILIKE ${`%${query}%`} OR
-            paquetes.subtitle ILIKE ${`%${query}%`} OR
-            paquetes.country::text ILIKE ${`%${query}%`} OR
-            paquetes.tag::text ILIKE ${`%${query}%`}
-        ORDER BY paquetes.id DESC
-      `;
 
-      return paquetes;
-  } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch invoices.');
-  }
-}
 
 export async function fetchInvoicesPages(query: string) {
   try {

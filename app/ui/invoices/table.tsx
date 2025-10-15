@@ -15,6 +15,7 @@ export default async function InvoicesTable(
                 {paquetes.map((p, index) => (
                     <TravelCard
                         key={index}
+                        id={p.id}
                         title={p.title}
                         subtitle={p.subtitle}
                         price={p.price}
