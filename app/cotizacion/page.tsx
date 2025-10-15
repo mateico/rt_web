@@ -1,6 +1,4 @@
-import { fetchCustomers } from '@/app/lib/data';
 import SolicitarCotizacionForm from '@/app/ui/cotizacion/cotizacion-form';
-
 
 export default async function Page() {
 
