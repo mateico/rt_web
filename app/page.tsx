@@ -1,7 +1,5 @@
+import { redirect } from 'next/navigation';
+
 export default function Page() {
-    return (
-        <>
-            <h1>hola root</h1>
-        </>
-    );
+    redirect('/start');
 }
