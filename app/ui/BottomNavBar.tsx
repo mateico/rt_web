@@ -3,10 +3,15 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
-    HomeIcon,
-    DocumentDuplicateIcon,
-    UserGroupIcon,
+    HomeIcon as HomeOutline,
+    DocumentDuplicateIcon as DocumentOutline,
+    UserGroupIcon as UserOutline,
 } from '@heroicons/react/24/outline';
+import {
+    HomeIcon as HomeSolid,
+    DocumentDuplicateIcon as DocumentSolid,
+    UserGroupIcon as UserSolid,
+} from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import clsx from 'clsx';
 import ColorfullBar from '@/app/ui/colorfullBar';
@@ -23,11 +28,11 @@ const LogoSlot = () => (
 );
 
 const navItems = [
-    { name: 'Home', href: '/start', icon: HomeIcon },
-    { name: 'Paquetes', href: '/paquetes', icon: DocumentDuplicateIcon },
+    { name: 'Home', href: '/start', outline: HomeOutline, solid: HomeSolid },
+    { name: 'Paquetes', href: '/paquetes', outline: DocumentOutline, solid: DocumentSolid },
     { name: 'Logo', href: '', icon: LogoSlot },
-    { name: 'Cotizaciones', href: '/cotizacion', icon: UserGroupIcon },
-    { name: 'Nosotros', href: '/about', icon: UserGroupIcon },
+    { name: 'Cotizaciones', href: '/cotizacion', outline: UserOutline, solid: UserSolid },
+    { name: 'Nosotros', href: '/about', outline: UserOutline, solid: UserSolid },
 ];
 
 export default function BottomNavBar() {
@@ -41,15 +46,18 @@ export default function BottomNavBar() {
             {/* Bottom nav bar */}
             <nav className="flex justify-between items-center bg-secondary-30 border-t border-gray-200 px-2 py-2">
                 {navItems.map((item) => {
-                    const Icon = item.icon;
+                    //const Icon = item.icon;
 
                     if (item.name === 'Logo') {
+                        const Icon = item.icon;
                         return (
                             <div key="logo" className="flex flex-1 justify-center items-center">
                                 <Icon />
                             </div>
                         );
                     }
+
+                    const Icon = pathname === item.href ? item.solid : item.outline;
 
                     return (
                         <Link
