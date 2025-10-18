@@ -3,6 +3,7 @@ import { inter } from '@/app/ui/fonts'
 import TopNavBar from "@/app/ui/TopNavBar";
 import Foot from "@/app/ui/Foot"
 import BottomNavBar from '@/app/ui/BottomNavBar';
+import FloatingWhatsAppButton from '@/app/ui/FloatingWhatsAppButton';
 
 
 export default function RootLayout({
@@ -16,6 +17,7 @@ export default function RootLayout({
         <TopNavBar/>
         <main className="flex-grow mx-auto max-w-screen-xl p-6 pb-[calc(6rem+4px)] mb:pb=6">{children}</main>
         <BottomNavBar />
+        <FloatingWhatsAppButton phoneE164="+59899898715" />
         <Foot/>
         </body>
         </html>
