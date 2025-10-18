@@ -4,12 +4,14 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
     HomeIcon as HomeOutline,
-    DocumentDuplicateIcon as DocumentOutline,
+    BriefcaseIcon as BriefcaseOutline,
+    CurrencyDollarIcon as DollarOutline,
     UserGroupIcon as UserOutline,
 } from '@heroicons/react/24/outline';
 import {
     HomeIcon as HomeSolid,
-    DocumentDuplicateIcon as DocumentSolid,
+    BriefcaseIcon as BriefcaseSolid,
+    CurrencyDollarIcon as DollarSolid,
     UserGroupIcon as UserSolid,
 } from '@heroicons/react/24/solid';
 import Image from 'next/image';
@@ -28,10 +30,10 @@ const LogoSlot = () => (
 );
 
 const navItems = [
-    { name: 'Home', href: '/start', outline: HomeOutline, solid: HomeSolid },
-    { name: 'Paquetes', href: '/paquetes', outline: DocumentOutline, solid: DocumentSolid },
+    { name: 'Inicio', href: '/start', outline: HomeOutline, solid: HomeSolid },
+    { name: 'Paquetes', href: '/paquetes', outline: BriefcaseOutline, solid: BriefcaseSolid },
     { name: 'Logo', href: '', icon: LogoSlot },
-    { name: 'Cotizaciones', href: '/cotizacion', outline: UserOutline, solid: UserSolid },
+    { name: 'Cotizaciones', href: '/cotizacion', outline: DollarOutline, solid: DollarSolid },
     { name: 'Nosotros', href: '/about', outline: UserOutline, solid: UserSolid },
 ];
 
