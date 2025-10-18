@@ -21,7 +21,7 @@ import ColorfullBar from '@/app/ui/colorfullBar';
 const LogoSlot = () => (
     <div className="flex justify-center items-center">
         <Image
-            src="/rt_logo.webp"
+            src="/rt_logo_tr.webp"
             alt="Rufina Travel"
             width={48}
             height={48}
