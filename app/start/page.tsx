@@ -34,15 +34,16 @@ export default function Page() {
             </section>
 
             {/* Destinations Preview */}
-            <section className="px-6 py-16 md:px-20 bg-secondary-50 text-gray-800">
+            <section className="py-16 bg-secondary-50 text-gray-800">
                 <h2 className="text-3xl font-bold text-primary mb-8 text-center">
                     Destinos Populares
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                     {[
                         { title: 'Punta Cana', image: '/punta-cana.jpg' },
                         { title: 'Cancún', image: '/cancun.jpg' },
                         { title: 'Riviera Maya', image: '/riviera.jpg' },
+                        { title: 'Riviera 222', image: '/cancun.jpg' },
                     ].map((dest) => (
                         <div key={dest.title} className="rounded-lg overflow-hidden shadow-lg hover:scale-105 transition">
                             <Image
