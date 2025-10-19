@@ -13,7 +13,7 @@ export default function Page() {
                         Descubrí tu próximo destino
                     </h1>
                     <p className="mt-4 text-lg text-secondary-light">
-                        Viajes únicos, precios especiales y la atención que te merecés.
+                        Viajes únicos, precios especiales y nosotros contigo en cada paso.
                     </p>
                     <Link
                         href="/paquetes"
