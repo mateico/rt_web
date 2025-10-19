@@ -2,7 +2,8 @@
 
 import RFLogo from '@/app/ui/rf-logo';
 import ColorfullBar from '@/app/ui/colorfullBar';
-import NavLinks from '@/app/ui/nav-links'; // this is the one you already have
+import NavLinks from '@/app/ui/nav-links';
+import SocialLinks from "@/app/ui/SocialLinks"; // this is the one you already have
 
 export default function TopNavBar() {
     return (
@@ -14,6 +15,7 @@ export default function TopNavBar() {
                         <div className="flex items-center gap-4 mr-4">
                             <RFLogo className="h-8 w-auto flex-shrink-0"/>
                         </div>
+                        <SocialLinks/>
                         <nav className="flex gap-1 md:gap-4" role="navigation" aria-label="Main navigation">
                             <NavLinks/>
                         </nav>
