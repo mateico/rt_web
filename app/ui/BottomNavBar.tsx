@@ -51,7 +51,7 @@ export default function BottomNavBar() {
                     //const Icon = item.icon;
 
                     if (item.name === 'Logo') {
-                        const Icon = item.icon;
+                        const Icon = item.icon as React.ElementType;
                         return (
                             <div key="logo" className="flex flex-1 justify-center items-center">
                                 <Icon />
@@ -59,7 +59,7 @@ export default function BottomNavBar() {
                         );
                     }
 
-                    const Icon = pathname === item.href ? item.solid : item.outline;
+                    const Icon = (pathname === item.href ? item.solid : item.outline) as React.ElementType;
 
                     return (
                         <Link
