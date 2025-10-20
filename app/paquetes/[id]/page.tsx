@@ -2,6 +2,7 @@ import {fetchPaqueteById} from '@/app/lib/data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import Button from "@/public/Button";
 
 export default async function Page(props: { params: Promise<{ id: string }>}) {
     const params = await props.params;
@@ -52,9 +53,11 @@ export default async function Page(props: { params: Promise<{ id: string }>}) {
             <div>
                 <Link
                     href={`/about`}
-                    className="inline-block bg-primary-600 text-white px-6 py-2 rounded-md hover:bg-primary-700 transition"
                 >
-                    Solicitar información
+                    <Button variant="primary">
+                        Solicitar información
+                    </Button>
+
                 </Link>
             </div>
         </main>
