@@ -16,6 +16,7 @@ export default function Foot() {
                     <a href="#" className="hover:text-primary-700 transition-colors">Contacto</a>
                 </div>
 
+
                 {/* Right side: developer credit */}
                 <div className="flex items-center gap-2 text-xs text-gray-500">
                     <span>by</span>
