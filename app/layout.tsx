@@ -18,7 +18,7 @@ export default function RootLayout({
 {/*
         <main className="flex-grow mx-auto max-w-screen-xl p-6 pb-[calc(6rem+4px)] md:pb-6">{children}</main>
 */}
-        <main className="flex-grow py-6">{children}</main>
+        <main className="flex-grow py-6 pb-[calc(6rem+4px)]">{children}</main>
 
         <BottomNavBar />
         <FloatingWhatsAppButton phoneE164="+59899898715" />
