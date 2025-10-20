@@ -17,7 +17,7 @@ export default function Page() {
                     </p>
                     <Link
                         href="/paquetes"
-                        className="mt-6 inline-block rounded-lg bg-secondary-500  px-6 py-3 text-primary font-semibold shadow-md hover:bg-secondary-500 -800  transition"
+                        className="mt-6 inline-block rounded-lg bg-secondary-500 text-neutral-800 px-6 py-3 text-primary font-semibold shadow-md hover:bg-secondary-600 -800  transition"
                     >
                         Ver Paquetes
                     </Link>
@@ -62,7 +62,7 @@ export default function Page() {
             </section>
 
             {/* Contact CTA */}
-            <section className="bg-secondary-500 rounded-lg py-16 px-6 md:px-20 text-primary text-center">
+            <section className="bg-secondary-500 rounded-lg py-16 px-6 md:px-20 text-primary text-center text-primary-800">
                 <h3 className="text-3xl font-bold">¿Tenés dudas o querés reservar?</h3>
                 <p className="mt-2 text-lg">Contactanos y organizamos tu viaje ideal ✈️</p>
                 <Link
