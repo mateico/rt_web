@@ -66,7 +66,7 @@ export default function Page() {
                 <h3 className="text-3xl font-bold">¿Tenés dudas o querés reservar?</h3>
                 <p className="mt-2 text-lg">Contactanos y organizamos tu viaje ideal ✈️</p>
                 <Link
-                    href="/contacto"
+                    href="/about"
                     className="mt-6 inline-block rounded-md bg-primary-800  text-white px-5 py-3 font-medium hover:bg-primary-900  transition"
                 >
                     Contactar ahora
