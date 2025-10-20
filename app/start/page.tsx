@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Page() {
     return (
-        <main className="min-h-screen bg-secondary-50  text-white">
+        <main className="overflow-x-hidden min-h-screen bg-secondary-50  text-white">
             {/* Hero Section */}
             <section className="full-bleed relative flex items-center justify-center py-24 text-white overflow-hidden">
                 {/* Background image */}
@@ -38,7 +38,7 @@ export default function Page() {
             </section>
 
             {/* Destinations Preview */}
-            <section className="py-16 bg-secondary-50 text-gray-800">
+            <section className="w-full max-w-screen-xl mx-auto py-16 bg-secondary-50  px-6 text-gray-800">
                 <h2 className="text-3xl font-bold text-primary mb-8 text-center">
                     Destinos Populares
                 </h2>

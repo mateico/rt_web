@@ -22,7 +22,7 @@ export default function Foot() {
                     <Image
                         src="/mateo_logo_3.webp"
                         alt="Mateo Builds Software"
-                        width={200}
+                        width={146}
                         height={56}
                         className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity ml-2"
                     />

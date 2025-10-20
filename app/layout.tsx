@@ -15,7 +15,11 @@ export default function RootLayout({
         <html lang="en">
         <body className={`${inter.className} flex min-h-screen flex-col bg-secondary-50`}>
         <TopNavBar/>
+{/*
         <main className="flex-grow mx-auto max-w-screen-xl p-6 pb-[calc(6rem+4px)] md:pb-6">{children}</main>
+*/}
+        <main className="flex-grow py-6">{children}</main>
+
         <BottomNavBar />
         <FloatingWhatsAppButton phoneE164="+59899898715" />
         <Foot/>

@@ -3,7 +3,7 @@ import SolicitarCotizacionForm from '@/app/ui/cotizacion/cotizacion-form';
 export default async function Page() {
 
     return (
-    <main className="max-w-3xl mx-auto">
+    <main className="w-full max-w-screen-xl mx-auto px-6">
         <SolicitarCotizacionForm />
     </main>
     );

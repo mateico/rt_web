@@ -14,7 +14,7 @@ export default async function Page(props: {
     const currentPage = Number(searchParams?.page) || 1;
 
     return (
-        <div className="w-full">
+        <div className="w-full max-w-screen-xl mx-auto px-6">
             <div className="flex items-center justify-between gap-2">
                 <Search placeholder="Buscar destino..."/>
             </div>

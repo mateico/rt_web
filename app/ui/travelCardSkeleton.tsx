@@ -4,7 +4,7 @@ export default function TravelCardSkeleton() {
     return (
         <CardWrapper>
             {/* Image section */}
-            <div className="h-48 w-80 bg-gray-300 animate-pulse" />
+            <div className="h-48 w-90 bg-gray-300 animate-pulse" />
 
             {/* Text section */}
             <div className="p-4 space-y-2 animate-pulse">
