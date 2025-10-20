@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import CardWrapper from '@/app/ui/CardWrapper';
+
 
 type TravelCardProps = {
     id: string;
@@ -25,6 +27,7 @@ export default function TravelCard({
             href={`/paquetes/${id}`}
             className="rounded-lg overflow-hidden shadow-md bg-white"
         >
+            <CardWrapper>
             {/* Image section */}
             <div className="h-48 relative">
                 <Image
@@ -36,6 +39,7 @@ export default function TravelCard({
                 />
 
             </div>
+
 
             {/* Text section */}
             <div className="p-4 space-y-1">
@@ -54,6 +58,7 @@ export default function TravelCard({
                         className="bg-secondary-400 -400 text-secondary-dark rounded-full px-2 py-0.5 text-xs">{tag}</span>
                 </div>
             </div>
+            </CardWrapper>
         </Link>
 
     );
