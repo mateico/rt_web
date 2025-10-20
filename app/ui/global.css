@@ -17,6 +17,18 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0;
 }
 
-html{
+/*html{
     scrollbar-gutter: stable both-edges;
+}*/
+
+@layer utilities {
+    /* Make a child escape the centered container and span the whole viewport width */
+    .full-bleed {
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        width: 100vw;
+    }
 }

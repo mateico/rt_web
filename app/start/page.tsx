@@ -7,29 +7,33 @@ export default function Page() {
     return (
         <main className="min-h-screen bg-secondary-50  text-white">
             {/* Hero Section */}
-            <section className="relative rounded-lg bg-primary-700 flex flex-col md:flex-row items-center justify-between px-6 py-20 md:px-20 bg-gradient-to-r from-primary to-primary-dark">
-                <div className="md:w-1/2 text-center md:text-left">
+            <section className="full-bleed relative flex items-center justify-center py-24 text-white overflow-hidden">
+                {/* Background image */}
+                <Image
+                    src="/hero-image.webp"
+                    alt="Viaje soñado"
+                    fill
+                    priority
+                    className="object-cover"
+                />
+
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-700/100 to-primary-700/40" />
+
+                {/* Text content */}
+                <div className="relative z-10 max-w-screen-xl mx-auto px-6 md:px-20 md:text-left">
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
                         Descubrí tu próximo destino
                     </h1>
                     <p className="mt-4 text-lg text-secondary-light">
-                        Viajes únicos, precios especiales y nosotros contigo en cada paso.
+                        Viajes únicos, precios especiales <br/> y nosotros contigo en cada paso.
                     </p>
                     <Link
                         href="/paquetes"
-                        className="mt-6 inline-block rounded-lg bg-secondary-500 text-neutral-800 px-6 py-3 text-primary font-semibold shadow-md hover:bg-secondary-600 -800  transition"
+                        className="mt-6 inline-block rounded-lg bg-secondary-500 text-neutral-800 px-6 py-3 text-primary font-semibold shadow-md hover:bg-secondary-600 transition"
                     >
                         Ver Paquetes
                     </Link>
-                </div>
-                <div className="md:w-1/2 mt-10 md:mt-0 md:ml-8">
-                    <Image
-                        src="/hero-image.webp"
-                        alt="Viaje soñado"
-                        width={600}
-                        height={400}
-                        className="rounded-lg shadow-lg object-cover w-full h-auto"
-                    />
                 </div>
             </section>
 
@@ -43,7 +47,7 @@ export default function Page() {
                         { title: 'Punta Cana', image: '/punta-cana.jpg' },
                         { title: 'Cancún', image: '/cancun.jpg' },
                         { title: 'Riviera Maya', image: '/riviera.jpg' },
-                        { title: 'Riviera 222', image: '/cancun.jpg' },
+                        { title: 'Colombia', image: '/cancun.jpg' },
                     ].map((dest) => (
                         <div key={dest.title} className="rounded-lg overflow-hidden shadow-lg hover:scale-105 transition">
                             <Image
@@ -62,9 +66,9 @@ export default function Page() {
             </section>
 
             {/* Contact CTA */}
-            <section className="bg-secondary-500 rounded-lg py-16 px-6 md:px-20 text-primary text-center text-primary-800">
+            <section className="full-bleed  bg-secondary-500 rounded-lg py-16 px-6 md:px-20 text-primary text-center text-primary-800">
                 <h3 className="text-3xl font-bold">¿Tenés dudas o querés reservar?</h3>
-                <p className="mt-2 text-lg">Contactanos y organizamos tu viaje ideal ✈️</p>
+                <p className="mt-2 text-lg">Contactanos y organizamos tu viaje ideal.</p>
                 <Link
                     href="/about"
                     className="mt-6 inline-block rounded-md bg-primary-800  text-white px-5 py-3 font-medium hover:bg-primary-900  transition"
