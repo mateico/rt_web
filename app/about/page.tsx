@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import Button from "@/public/Button";
 
 export default function Page() {
     return (
@@ -65,11 +66,10 @@ export default function Page() {
 
                     {/* Call-to-action */}
                     <div className="text-center md:text-right">
-                        <Link
-                            href="/paquetes"
-                            className="inline-block rounded-lg bg-secondary-500  text-primary font-semibold px-6 py-3 text-lg shadow hover:bg-secondary-500 -800  transition"
-                        >
-                            Ver Paquetes
+                        <Link href="/paquetes">
+                            <Button variant="secondary">
+                                Ver Paquetes
+                            </Button>
                         </Link>
                     </div>
                 </div>

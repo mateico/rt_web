@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import Button from "@/public/Button";
 
 export default function Page() {
     return (
@@ -28,11 +29,10 @@ export default function Page() {
                     <p className="mt-4 text-lg text-secondary-light">
                         Viajes únicos, precios especiales <br/> y nosotros contigo en cada paso.
                     </p>
-                    <Link
-                        href="/paquetes"
-                        className="mt-6 inline-block rounded-lg bg-secondary-500 text-neutral-800 px-6 py-3 text-primary font-semibold shadow-md hover:bg-secondary-600 transition"
-                    >
-                        Ver Paquetes
+                    <Link href="/paquetes">
+                        <Button variant="secondary" className="mt-6">
+                            Ver Paquetes
+                        </Button>
                     </Link>
                 </div>
             </section>
@@ -69,11 +69,10 @@ export default function Page() {
             <section className="full-bleed  bg-secondary-500 rounded-lg py-16 px-6 md:px-20 text-primary text-center text-primary-800">
                 <h3 className="text-3xl font-bold">¿Tenés dudas o querés reservar?</h3>
                 <p className="mt-2 text-lg">Contactanos y organizamos tu viaje ideal.</p>
-                <Link
-                    href="/about"
-                    className="mt-6 inline-block rounded-md bg-primary-800  text-white px-5 py-3 font-medium hover:bg-primary-900  transition"
-                >
-                    Contactar ahora
+                <Link href="/about">
+                    <Button variant="primary" className="mt-8">
+                        Contactar ahora
+                    </Button>
                 </Link>
             </section>
         </main>

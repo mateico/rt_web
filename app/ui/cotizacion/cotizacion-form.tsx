@@ -2,6 +2,8 @@
 
 import { useState, useRef } from 'react';
 import { ExclamationCircleIcon, CheckCircleIcon } from '@heroicons/react/24/solid';
+import Button from "@/public/Button";
+
 
 type Errors = {
     name?: string;
@@ -179,12 +181,12 @@ export default function SolicitarCotizacionForm() {
             </div>
 
             <div className="text-center">
-                <button
+                <Button
+                    variant="primary"
                     type="submit"
-                    className="bg-primary-800 text-white px-6 py-2 rounded-md hover:bg-primary-900 transition-colors"
                 >
                     Enviar cotización
-                </button>
+                </Button>
             </div>
         </form>
     );
