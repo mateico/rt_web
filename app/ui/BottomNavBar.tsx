@@ -24,7 +24,7 @@ const LogoSlot = () => (
             src="/rt_logo_tr.webp"
             alt="Rufina Travel"
             width={48}
-            height={48}
+            height={28}
         />
     </div>
 );
