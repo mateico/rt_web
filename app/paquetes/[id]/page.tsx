@@ -19,7 +19,7 @@ export default async function Page(props: { params: Promise<{ id: string }>}) {
     const { title, subtitle, price, image, country, tag } = paquete;
 
     return (
-        <main className="max-w-4xl mx-auto space-y-6">
+        <main className="max-w-4xl mx-auto space-y-6  px-6">
             {/* Image */}
             <div className="relative w-full h-64">
                 <Image
