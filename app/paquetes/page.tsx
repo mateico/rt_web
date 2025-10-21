@@ -1,5 +1,5 @@
 import Search from '@/app/ui/search';
-import Table from '@/app/ui/invoices/table';
+import Table from '@/app/ui/paquetes/table';
 import { Suspense } from 'react';
 import PaquetesTableSkeleton from "@/app/ui/paquetesTableSkeleton";
 
