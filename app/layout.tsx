@@ -21,7 +21,7 @@ export default function RootLayout({
         <main className="flex-grow py-6 pb-[calc(6rem+4px)]">{children}</main>
 
         <BottomNavBar />
-        <FloatingWhatsAppButton phoneE164="+59899898715" />
+        <FloatingWhatsAppButton phoneE164="+59899767804" />
         <Foot/>
         </body>
         </html>

@@ -2,8 +2,8 @@ import { Facebook, Linkedin, Instagram } from 'lucide-react';
 
 export default function SocialLinks({ className = '' }) {
     const links = [
-        { href: 'https://facebook.com/yourpage', label: 'Facebook', Icon: Facebook },
-        { href: 'https://instagram.com/yourpage', label: 'Instagram', Icon: Instagram },
+        { href: 'https://www.facebook.com/people/Rufina-Travel/61558155303545/#', label: 'Facebook', Icon: Facebook },
+        { href: 'https://www.instagram.com/rufinatravel/?hl=en', label: 'Instagram', Icon: Instagram },
     ];
 
     return (

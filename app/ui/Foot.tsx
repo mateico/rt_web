@@ -18,14 +18,14 @@ export default function Foot() {
 
 
                 {/* Right side: developer credit */}
-                <div className="flex items-center gap-2 text-xs text-gray-500">
+                <div className="flex items-end gap-2 text-xs text-gray-500">
                     <span>by</span>
                     <Image
                         src="/mateo_logo_3.webp"
                         alt="Mateo Builds Software"
                         width={146}
                         height={56}
-                        className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity ml-2"
+                        className="h-10 w-auto ml-2"
                     />
                 </div>
             </div>
